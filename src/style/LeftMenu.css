@@ -1,0 +1,116 @@
+.aside {
+  background-color: rgba(0, 0, 0, 0.822);
+  width: 20%;
+  height: 100%;
+  padding: 60px 30px;
+  color: var(--light);
+  /* backdrop-filter: blur(10px); */
+}
+
+.aside-title {
+  display: flex;
+  column-gap: 15px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.aside-title h3 {
+  /* color: rgb(180, 180, 180); */
+  font-size: 26px;
+}
+
+.side-menu {
+  margin-bottom: 26px;
+}
+
+.side-menu h4,
+.favorites-container h4 {
+  /* color: rgb(180, 180, 180); */
+  font-size: 22px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+.side-menu li {
+  list-style-type: none;
+  padding-left: 10px;
+  line-height: 1.7;
+  cursor: pointer;
+}
+
+.no-songs {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.favorites-list {
+  height: 540px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.favorites-list .song-container {
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+}
+
+.favorites-list .song-wrap {
+  display: flex;
+  align-items: center;
+  width: 90%;
+  /* padding: 5px; */
+  /* flex-grow: 1; */
+}
+
+.favorites-list .song-container:hover {
+  background-color: rgba(112, 112, 112, 0.24);
+}
+
+.favorites-list .song-wrap .image-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  margin-left: 8px;
+}
+
+.favorites-list .song-wrap .image-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.favorites-list .song-wrap .title-wrap {
+  margin-left: 10px;
+  max-width: 65%;
+}
+
+.favorites-list .song-wrap .title-wrap h4 {
+  font-size: 16px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.favorites-list .song-wrap .title-wrap h5 {
+  font-size: 12px;
+  color: var(--grey);
+  font-weight: 300;
+}
+
+.favorites-list .song-container .remove-btn {
+  background: none;
+  border: none;
+  margin-left: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 10%;
+}

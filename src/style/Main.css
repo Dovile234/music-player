@@ -1,0 +1,154 @@
+.main {
+  padding-top: 30px;
+  width: 80%;
+  background-color: rgba(0, 0, 0, 0.719);
+  height: 100%;
+  color: var(--light);
+}
+
+#left {
+  margin-right: 10px;
+}
+
+.main .genres-wrap {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.main .genres-wrap h4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.all-genres-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.all-genres-wrap h2 {
+  font-weight: 500;
+}
+
+.arrow-btn i {
+  color: white;
+  cursor: pointer;
+  transition: 0.3s linear;
+}
+
+.arrow-btn i:hover {
+  color: rgb(189, 189, 189);
+}
+
+.main .genres-wrap .genres {
+  display: flex;
+  width: 100%;
+  height: 200px;
+  margin-top: 15px;
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
+.main .genres-wrap .genres::-webkit-scrollbar {
+  display: none;
+}
+
+.genre-wrapper {
+  min-width: 130px;
+  height: 130px;
+  margin-right: 10px;
+  transition: 0.3s linear;
+  position: relative;
+  cursor: pointer;
+  background-image: url(../assets/img/bg2.png);
+  object-fit: cover;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.genre-wrapper:hover {
+  min-width: 140px;
+  height: 140px;
+}
+
+.recommended-song-wrapper .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.recommended-songs-page {
+  height: 800px;
+}
+
+.recommended-songs {
+  height: 570px;
+}
+
+.recommended-songs,
+.recommended-songs-page {
+  max-width: 85%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.recommended-songs h2,
+.recommended-songs-page h2 {
+  font-weight: 500;
+}
+
+.recommended-song-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.recommended-song-wrapper:hover {
+  background-color: rgba(112, 112, 112, 0.24);
+}
+
+.recommended-song {
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
+
+.recommended-song-wrapper .image-wrapper {
+  height: 80px;
+  width: 80px;
+}
+
+.recommended-song h4,
+.recommended-song h5 {
+  width: 40%;
+  margin-left: 40px;
+}
+
+.recommended-song-wrapper button {
+  background: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.recommended-song-wrapper button img {
+  height: 100%;
+  width: 100%;
+}
+
+.recommended-song-wrapper button img:hover {
+  filter: brightness(0) invert(1);
+}
