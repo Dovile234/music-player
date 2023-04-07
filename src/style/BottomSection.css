@@ -1,14 +1,11 @@
 .bottom {
   width: 100%;
-  position: fixed;
-  left: 0;
-  bottom: 0;
   display: grid;
   grid-template-columns: 24% 7% 39% 22% 6%;
-  height: 80px;
+  height: 9%;
   align-items: center;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.418);
+  background-color: rgb(26, 26, 26);
 }
 
 .image-wrap {
@@ -60,7 +57,16 @@ input {
   background-color: rgb(236, 236, 236);
 }
 
-input::-webkit-slider-thumb,
+input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1px;
+  width: 7px;
+  background: #3fa3d4;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: -400px 0 0 400px #3fa3d4;
+}
+
 input::-moz-range-thumb {
   -webkit-appearance: none;
   height: 1px;

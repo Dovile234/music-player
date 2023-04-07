@@ -8,18 +8,20 @@
   font-weight: 300;
   text-align: center;
   margin-bottom: 40px;
+  height: 100%;
 }
 
 .genres-container .genres {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  row-gap: 20px;
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 25px;
+  row-gap: 25px;
+  height: 70vh;
 }
 
 .genres-container .genres .genre-wrapper {
-  width: 200px;
-  height: 200px;
+  width: calc(100% / 4 - 30px);
+  height: 28%;
   background-image: url(../assets/img/bg2.png);
   cursor: pointer;
   margin: 5px;

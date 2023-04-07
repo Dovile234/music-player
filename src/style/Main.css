@@ -2,8 +2,8 @@
   padding-top: 30px;
   width: 80%;
   background-color: rgba(0, 0, 0, 0.719);
-  height: 100%;
   color: var(--light);
+  height: 91%;
 }
 
 #left {
@@ -89,8 +89,12 @@
   height: 800px;
 }
 
+.main-page-wrap {
+  height: 100%;
+}
+
 .recommended-songs {
-  height: 570px;
+  height: 63%;
 }
 
 .recommended-songs,

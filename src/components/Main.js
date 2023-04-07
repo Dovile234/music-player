@@ -17,7 +17,7 @@ const Main = ({ setSong, addToFavorites, page, setGenre, genre, setPage }) => {
   return (
     <div className="main">
       {page === "main" && genre === "" && (
-        <div>
+        <div className="main-page-wrap">
           <div className="genres-wrap">
             <div className="all-genres-wrap">
               <h2>Genres</h2>
