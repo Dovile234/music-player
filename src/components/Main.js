@@ -1,17 +1,12 @@
-import {
-  faArrowLeft,
-  faArrowRight,
-  faHeart,
-} from "@fortawesome/free-solid-svg-icons";
+import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-
 import Genres from "./Genres";
 import Recommended from "./Recommended";
 import { genresArr } from "../components/MusicList";
 import SongsResults from "./SongsResults";
 
-const Main = ({ setSong, addToFavorites, page, setGenre, genre }) => {
+const Main = ({ setSong, addToFavorites, page, setGenre, genre, setPage }) => {
   const scrollRightHandler = () => {
     document.querySelector(".genres").scrollLeft += 330;
   };
@@ -21,7 +16,7 @@ const Main = ({ setSong, addToFavorites, page, setGenre, genre }) => {
 
   return (
     <div className="main">
-      {page === "main" && (
+      {page === "main" && genre === "" && (
         <div>
           <div className="genres-wrap">
             <div className="all-genres-wrap">
@@ -49,39 +44,6 @@ const Main = ({ setSong, addToFavorites, page, setGenre, genre }) => {
                   <h4>{genre.name}</h4>
                 </div>
               ))}
-              {/* <div className="genre-wrapper">
-                <h4>Pop</h4>
-              </div>
-              <div className="genre-wrapper">
-                <h4>Rock</h4>
-              </div>
-              <div className="genre-wrapper">
-                <h4>Indie rock</h4>
-              </div>
-              <div className="genre-wrapper">
-                <h4>Jazz</h4>
-              </div>
-              <div className="genre-wrapper">
-                <h4>Electronic</h4>
-              </div>
-              <div className="genre-wrapper">
-                <h4>Punk</h4>
-              </div>
-              <div className="genre-wrapper">
-                <h4>Indie Pop</h4>
-              </div>
-              <div className="genre-wrapper">
-                <h4>Synthwave</h4>
-              </div>
-              <div className="genre-wrapper">
-                <h4>Ambient</h4>
-              </div>
-              <div className="genre-wrapper">
-                <h4>Alternative</h4>
-              </div>
-              <div className="genre-wrapper">
-                <h4>Chill</h4>
-              </div> */}
             </div>
           </div>
           {page === "main" && genre === "" && (
@@ -97,7 +59,15 @@ const Main = ({ setSong, addToFavorites, page, setGenre, genre }) => {
           page={page}
         />
       )}
-      {genre && <SongsResults genre={genre} />}
+      {genre && (
+        <SongsResults
+          genre={genre}
+          setSong={setSong}
+          addToFavorites={addToFavorites}
+          setGenre={setGenre}
+          setPage={setPage}
+        />
+      )}
     </div>
   );
 };

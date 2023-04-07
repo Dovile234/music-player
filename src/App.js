@@ -64,6 +64,7 @@ function App() {
           favoritesList={favoritesList}
           setSong={setSong}
           page={page}
+          setPage={setPage}
           setGenre={setGenre}
           genre={genre}
         />

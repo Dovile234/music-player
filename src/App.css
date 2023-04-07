@@ -2,6 +2,7 @@
 @import "./style/LeftMenu.css";
 @import "./style/Main.css";
 @import "./style/Genres.css";
+@import "./style/SongResults.css";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500&display=swap");
 
@@ -27,6 +28,11 @@
   display: none;
 }
 
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 .App {
   width: 100%;
   height: 100vh;
@@ -40,12 +46,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgb(87, 87, 87);
-  background: radial-gradient(
-    circle,
-    rgba(87, 87, 87, 1) 2%,
-    rgba(40, 40, 40, 1) 68%
-  );
+  background-color: rgb(87, 87, 87);
 }
 svg {
   color: rgb(177, 177, 177);
@@ -69,13 +70,6 @@ svg:hover {
 }
 
 .container {
-  /* background-image: url(/images/bg.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  object-fit: cover; */
-  /* display: grid;
-  grid-template-columns: 20% 80%;
-  grid-template-rows: 85% 15%; */
   display: flex;
   flex-wrap: wrap;
   width: 100%;

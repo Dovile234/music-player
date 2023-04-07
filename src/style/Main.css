@@ -136,6 +136,16 @@
   margin-left: 40px;
 }
 
+.recommended-song h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.recommended-song h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
 .recommended-song-wrapper button {
   background: none;
   border: none;

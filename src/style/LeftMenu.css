@@ -43,8 +43,12 @@
   font-weight: 300;
 }
 
+/* .favorites-container {
+  margin-bottom: 160px;
+} */
+
 .favorites-list {
-  height: 540px;
+  height: 500px;
   overflow-x: hidden;
   overflow-y: scroll;
   position: relative;

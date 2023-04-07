@@ -5,7 +5,7 @@
   bottom: 0;
   display: grid;
   grid-template-columns: 24% 7% 39% 22% 6%;
-  height: 9%;
+  height: 80px;
   align-items: center;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.418);
@@ -57,17 +57,18 @@ input {
   cursor: pointer;
   overflow: hidden;
   border-radius: 30px;
-  background-color: rgb(206, 206, 206);
+  background-color: rgb(236, 236, 236);
 }
 
-input::-webkit-slider-thumb {
+input::-webkit-slider-thumb,
+input::-moz-range-thumb {
   -webkit-appearance: none;
   height: 1px;
   width: 7px;
-  background: #ff8a65;
+  background: #3fa3d4;
   border-radius: 50%;
   cursor: pointer;
-  box-shadow: -400px 0 0 400px #ff8a65;
+  box-shadow: -400px 0 0 400px #3fa3d4;
 }
 
 .bottom input {
@@ -268,7 +269,7 @@ input::-webkit-slider-thumb {
 }
 
 svg#active {
-  color: #ff5522;
+  color: #3fa3d4;
 }
 
 @keyframes wave {

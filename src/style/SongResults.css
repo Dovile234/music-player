@@ -1,0 +1,97 @@
+.songs-results-wrapper {
+  height: 800px;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--lighter);
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+.recommended-songs,
+.recommended-songs-page {
+  max-width: 85%;
+  margin: 0 auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.songs-results-wrapper h2 {
+  font-weight: 500;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+
+.songs-results {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.songs-results:hover {
+  background-color: rgba(112, 112, 112, 0.24);
+}
+
+.songs-results .song {
+  display: flex;
+  width: 90%;
+  align-items: center;
+}
+
+.songs-results .image-wrapper {
+  height: 80px;
+  width: 80px;
+}
+
+.songs-results .image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.songs-results h4,
+.songs-results h5 {
+  width: 40%;
+  margin-left: 40px;
+}
+
+.songs-results h4 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.songs-results h5 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.songs-results button {
+  background: none;
+  border: none;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.songs-results button img {
+  height: 100%;
+  width: 100%;
+}
+
+.songs-results button img:hover {
+  filter: brightness(0) invert(1);
+}
