@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet";
 import { useEffect, useState } from "react";
 import "./App.css";
 import BottomSection from "./components/BottomSection";
@@ -52,6 +53,12 @@ function App() {
 
   return (
     <div className="App">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Music Player</title>
+        {/* <link rel="canonical" href="" /> */}
+        <meta name="description" content="Music player" />
+      </Helmet>
       <div className="container">
         <LeftMenu
           favoritesArr={favoritesArr}
