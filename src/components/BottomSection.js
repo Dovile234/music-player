@@ -1,7 +1,6 @@
 import {
   faBackwardStep,
   faForwardStep,
-  faHeart,
   faPause,
   faPlay,
   faRepeat,
@@ -77,7 +76,7 @@ const BottomSection = ({ song, addToFavorites, songs, setSong }) => {
     if (song.id > 0) {
       setPlay(true);
 
-      let res = songs.find((item) => item.id == song.id - 1);
+      let res = songs.find((item) => item.id === song.id - 1);
       setSong(res);
     }
     setPlay(true);
@@ -85,10 +84,10 @@ const BottomSection = ({ song, addToFavorites, songs, setSong }) => {
 
   const nextSongHandler = () => {
     if (song.id < songs.length - 1) {
-      let res = songs.find((item) => item.id == song.id + 1);
+      let res = songs.find((item) => item.id === song.id + 1);
       setSong(res);
     } else {
-      let res = songs.find((item) => item.id == 0);
+      let res = songs.find((item) => item.id === 0);
       setSong(res);
     }
     setPlay(true);
@@ -108,10 +107,10 @@ const BottomSection = ({ song, addToFavorites, songs, setSong }) => {
   const autoplayHandler = () => {
     if (autoPlay) {
       if (song.id < songs.length - 1) {
-        let res = songs.find((item) => item.id == song.id + 1);
+        let res = songs.find((item) => item.id === song.id + 1);
         setSong(res);
       } else {
-        let res = songs.find((item) => item.id == 0);
+        let res = songs.find((item) => item.id === 0);
         setSong(res);
       }
       setPlay(true);

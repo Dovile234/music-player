@@ -22,7 +22,7 @@ const Recommended = ({ addToFavorites, setSong, page }) => {
             </div>
           </div>
           <button onClick={() => addToFavorites(song.id)}>
-            <img id="heart" src={heart} />
+            <img id="heart" src={heart} alt="favorite" />
           </button>
         </div>
       ))}

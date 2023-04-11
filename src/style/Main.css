@@ -78,8 +78,8 @@
 }
 
 .genre-wrapper:hover {
-  min-width: 140px;
-  height: 140px;
+  min-width: 190px;
+  height: 190px;
 }
 
 .recommended-song-wrapper .image-wrapper img {
@@ -196,6 +196,11 @@
   .genre-wrapper {
     min-width: 130px;
     height: 130px;
+  }
+
+  .genre-wrapper:hover {
+    min-width: 140px;
+    height: 140px;
   }
 }
 

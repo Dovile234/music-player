@@ -29,7 +29,7 @@ const SongsResults = ({
       <h2>{genre}</h2>
       {songsArr.map(
         (song, index) =>
-          song.genre == genre && (
+          song.genre === genre && (
             <div key={index} className="songs-results">
               <div className="song" onClick={() => setSong(song)}>
                 <div className="image-wrapper">
@@ -41,7 +41,7 @@ const SongsResults = ({
                 </div>
               </div>
               <button onClick={() => addToFavorites(song.id)}>
-                <img id="heart" src={heart} />
+                <img id="heart" src={heart} alt="favorite" />
               </button>
             </div>
           )

@@ -28,12 +28,12 @@ function App() {
   let songs = JSON.parse(localStorage.getItem("songs"));
 
   const addToFavorites = (id) => {
-    let favorites = songs.find((song) => song.id == id);
+    let favorites = songs.find((song) => song.id === id);
 
-    if (favoritesList.length == 0) {
+    if (favoritesList.length === 0) {
       favoritesList.push(favorites);
     } else {
-      let res = favoritesList.find((item) => item.id == id);
+      let res = favoritesList.find((item) => item.id === id);
       if (res === undefined) {
         favoritesList.push(favorites);
       }
