@@ -148,8 +148,11 @@ const BottomSection = ({ song, addToFavorites, songs, setSong }) => {
         onEnded={autoplayHandler}
       ></audio>
       <div className="bottom-image-wrap">
-        <div className="image-wrap">
-          <img id="track-image" src={song.img} />
+        <div
+          className="image-wrap"
+          style={{ backgroundImage: `url(${song.img})` }}
+        >
+          {/* <img id="track-image" src={song.img} alt="band" /> */}
         </div>
         <div className="title-wrap">
           <h4 id="title">{song.name}</h4>
@@ -171,6 +174,21 @@ const BottomSection = ({ song, addToFavorites, songs, setSong }) => {
           <FontAwesomeIcon icon={faForwardStep} size="2xl" />
         </button>
       </nav>
+      <div className="buttons-wrap-mobile">
+        <button className="auto-mobile" onClick={autoplaySwitchHandler}>
+          <FontAwesomeIcon
+            icon={faRepeat}
+            size="xl"
+            id={autoPlay === true ? "active" : ""}
+          />
+        </button>
+        <button
+          className="addToFav-mobile"
+          onClick={() => addToFavorites(song.id)}
+        >
+          <img className="heart" src={heart} alt="favorite" />
+        </button>
+      </div>
       <div className="duration-wrap">
         <span className="current">{current}</span>
         <div className="duration">
@@ -213,15 +231,15 @@ const BottomSection = ({ song, addToFavorites, songs, setSong }) => {
           />
         </button>
         <button className="addToFav" onClick={() => addToFavorites(song.id)}>
-          <img id="heart" src={heart} />
+          <img id="heart" src={heart} alt="favorite" />
         </button>
-      </div>
 
-      <div className="animation">
-        <div className={play ? "wave active1" : "wave"} id="wave">
-          <div className="wave1"></div>
-          <div className="wave1"></div>
-          <div className="wave1"></div>
+        <div className="animation">
+          <div className={play ? "wave active1" : "wave"} id="wave">
+            <div className="wave1"></div>
+            <div className="wave1"></div>
+            <div className="wave1"></div>
+          </div>
         </div>
       </div>
     </section>

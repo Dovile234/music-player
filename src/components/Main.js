@@ -1,12 +1,24 @@
-import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faArrowLeft,
+  faArrowRight,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
+import React, { useState } from "react";
 import Genres from "./Genres";
 import Recommended from "./Recommended";
 import { genresArr } from "../components/MusicList";
 import SongsResults from "./SongsResults";
 
-const Main = ({ setSong, addToFavorites, page, setGenre, genre, setPage }) => {
+const Main = ({
+  setSong,
+  addToFavorites,
+  page,
+  setGenre,
+  genre,
+  setPage,
+  setAside,
+}) => {
   const scrollRightHandler = () => {
     document.querySelector(".genres").scrollLeft += 330;
   };
@@ -16,6 +28,13 @@ const Main = ({ setSong, addToFavorites, page, setGenre, genre, setPage }) => {
 
   return (
     <div className="main">
+      <FontAwesomeIcon
+        className="menu-button"
+        icon={faBars}
+        size="xl"
+        onClick={() => setAside(true)}
+      />
+
       {page === "main" && genre === "" && (
         <div className="main-page-wrap">
           <div className="genres-wrap">
@@ -46,9 +65,11 @@ const Main = ({ setSong, addToFavorites, page, setGenre, genre, setPage }) => {
               ))}
             </div>
           </div>
-          {page === "main" && genre === "" && (
-            <Recommended setSong={setSong} addToFavorites={addToFavorites} />
-          )}
+          <div className="main-recommended-songs">
+            {page === "main" && genre === "" && (
+              <Recommended setSong={setSong} addToFavorites={addToFavorites} />
+            )}
+          </div>
         </div>
       )}
       {page === "genres" && genre === "" && <Genres setGenre={setGenre} />}

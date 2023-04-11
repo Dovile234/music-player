@@ -35,8 +35,10 @@ const SongsResults = ({
                 <div className="image-wrapper">
                   <img src={song.img} alt="band" />
                 </div>
-                <h4>{song.name}</h4>
-                <h5>{song.singer}</h5>
+                <div className="title-wrap">
+                  <h4>{song.name}</h4>
+                  <h5>{song.singer}</h5>
+                </div>
               </div>
               <button onClick={() => addToFavorites(song.id)}>
                 <img id="heart" src={heart} />

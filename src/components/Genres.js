@@ -5,18 +5,19 @@ const Genres = ({ setGenre }) => {
   return (
     <div className="genres-container">
       <h2>Genres</h2>
-      <div className="genres">
-        {genresArr.map((genre, index) => (
-          <div
-            key={index}
-            className="genre-wrapper"
-            onClick={() => setGenre(genre.name)}
-          >
-            <h4>{genre.name}</h4>
-          </div>
-        ))}
+      <div className="genres-page-wrapper">
+        <div className="genres">
+          {genresArr.map((genre, index) => (
+            <div
+              key={index}
+              className="genre-wrapper"
+              onClick={() => setGenre(genre.name)}
+            >
+              <h4>{genre.name}</h4>
+            </div>
+          ))}
 
-        {/* <div className="genre-wrapper" onClick={() => setGenre("rock")}>
+          {/* <div className="genre-wrapper" onClick={() => setGenre("rock")}>
           <h4>Rock</h4>
         </div>
         <div className="genre-wrapper" onClick={() => setGenre("indierock")}>
@@ -46,6 +47,7 @@ const Genres = ({ setGenre }) => {
         <div className="genre-wrapper" onClick={() => setGenre("chill")}>
           <h4>Chill</h4>
         </div> */}
+        </div>
       </div>
     </div>
   );

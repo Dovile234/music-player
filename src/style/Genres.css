@@ -1,34 +1,50 @@
 .genres-container {
   max-width: 80%;
+  height: 100%;
   margin: 0 auto;
+  position: relative;
 }
 
 .genres-container h2 {
   text-transform: uppercase;
   font-weight: 300;
   text-align: center;
-  margin-bottom: 40px;
-  height: 100%;
+}
+
+.genres-page-wrapper {
+  width: 100%;
+  top: 60px;
+  bottom: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
 }
 
 .genres-container .genres {
-  display: flex;
-  flex-wrap: wrap;
-  column-gap: 25px;
-  row-gap: 25px;
-  height: 70vh;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  width: 80%;
+  grid-gap: 25px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* position: relative; */
 }
 
 .genres-container .genres .genre-wrapper {
-  width: calc(100% / 4 - 30px);
-  height: 28%;
   background-image: url(../assets/img/bg2.png);
   cursor: pointer;
   margin: 5px;
   transition: margin 0.3s ease-in-out;
+  padding-top: 100%;
+  position: relative;
 }
 
 .genres-container .genres .genre-wrapper h4 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,4 +62,56 @@
 
 .genres-container .genres .genre-wrapper:hover > h4 {
   backdrop-filter: blur(5px);
+}
+
+/* @media (max-width: 1590px) {
+  .genres-container {
+    max-width: 100%;
+  }
+
+  .genres-container .genres {
+    padding: 0 30px;
+  }
+
+  .genres-container .genres .genre-wrapper {
+    width: calc(100% / 4 - 30px);
+  }
+}
+
+@media (max-width: 1390px) {
+  .genres-container .genres .genre-wrapper {
+    height: calc(100% / 3);
+  }
+} */
+
+@media (max-width: 1200px) {
+  .genres-container .genres {
+    width: 100%;
+    grid-gap: 10px;
+  }
+
+  .genres-container {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1000px) {
+  .genres-container .genres {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+    row-gap: 0;
+  }
+}
+
+@media (max-width: 830px) {
+  .genres-container .genres {
+    grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+    row-gap: 10px;
+  }
+}
+
+@media (max-width: 290px) {
+  .genres-container .genres {
+    grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    row-gap: 10px;
+  }
 }

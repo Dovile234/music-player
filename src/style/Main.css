@@ -3,7 +3,11 @@
   width: 80%;
   background-color: rgba(0, 0, 0, 0.719);
   color: var(--light);
-  height: 91%;
+  height: calc(100% - 100px);
+}
+
+.menu-button {
+  display: none;
 }
 
 #left {
@@ -61,8 +65,8 @@
 }
 
 .genre-wrapper {
-  min-width: 130px;
-  height: 130px;
+  min-width: 180px;
+  height: 180px;
   margin-right: 10px;
   transition: 0.3s linear;
   position: relative;
@@ -86,15 +90,23 @@
 }
 
 .recommended-songs-page {
-  height: 800px;
+  height: 100%;
 }
 
 .main-page-wrap {
   height: 100%;
+  position: relative;
+}
+
+.main-recommended-songs {
+  position: absolute;
+  top: 260px;
+  bottom: 0px;
+  width: 100%;
 }
 
 .recommended-songs {
-  height: 63%;
+  height: 100%;
 }
 
 .recommended-songs,
@@ -129,6 +141,11 @@
   align-items: center;
 }
 
+.recommended-song .title-wrap {
+  display: flex;
+  width: calc(100% - 80px);
+}
+
 .recommended-song-wrapper .image-wrapper {
   height: 80px;
   width: 80px;
@@ -138,6 +155,7 @@
 .recommended-song h5 {
   width: 40%;
   margin-left: 40px;
+  width: 50%;
 }
 
 .recommended-song h4 {
@@ -165,4 +183,66 @@
 
 .recommended-song-wrapper button img:hover {
   filter: brightness(0) invert(1);
+}
+
+@media (max-width: 1580px) {
+  .main {
+    width: 75%;
+  }
+
+  .main .genres-wrap .genres {
+    height: 150px;
+  }
+  .genre-wrapper {
+    min-width: 130px;
+    height: 130px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .main {
+    width: 68%;
+  }
+
+  .recommended-song h4,
+  .recommended-song h5 {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 935px) {
+  .main {
+    width: 65%;
+  }
+}
+
+@media (max-width: 765px) {
+  .main {
+    width: 100%;
+    padding-top: 15px;
+  }
+
+  .main-recommended-songs {
+    top: 210px;
+  }
+
+  .menu-button {
+    display: block;
+    padding-left: 15px;
+    margin-bottom: 20px;
+  }
+
+  .recommended-song .title-wrap {
+    display: block;
+  }
+
+  .recommended-song h4 {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .recommended-song h5 {
+    font-size: 14px;
+    width: 100%;
+  }
 }

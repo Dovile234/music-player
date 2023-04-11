@@ -41,13 +41,18 @@
   padding: 5px;
 }
 
+.songs-results .title-wrap {
+  width: calc(100% - 80px);
+  display: flex;
+}
+
 .songs-results:hover {
   background-color: rgba(112, 112, 112, 0.24);
 }
 
 .songs-results .song {
   display: flex;
-  width: 90%;
+  width: 94%;
   align-items: center;
 }
 
@@ -94,4 +99,29 @@
 
 .songs-results button img:hover {
   filter: brightness(0) invert(1);
+}
+
+@media (max-width: 765px) {
+  .songs-results h4 {
+    font-size: 16px;
+  }
+
+  .songs-results h5 {
+    font-size: 14px;
+  }
+
+  .songs-results h4,
+  .songs-results h5 {
+    width: 100%;
+    margin-left: 10px;
+  }
+
+  .songs-results .title-wrap {
+    display: block;
+  }
+
+  .songs-results .image-wrapper {
+    height: 60px;
+    width: 60px;
+  }
 }

@@ -1,6 +1,8 @@
 import React from "react";
 import waves from "../assets/img/sound-waves.png";
 import PlaylistSong from "./PlaylistSong1";
+import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const LeftMenu = ({
   favoritesArr,
@@ -8,14 +10,25 @@ const LeftMenu = ({
   removeFromFavorites,
   setPage,
   setGenre,
+  aside,
+  setAside,
 }) => {
   const pageHandler = (id) => {
     setPage(id);
     setGenre("");
+    setAside(false);
   };
 
   return (
-    <aside className="aside">
+    <aside className={aside ? "aside active" : "aside"}>
+      {aside && (
+        <FontAwesomeIcon
+          icon={faXmark}
+          style={{ color: "white", marginBottom: "15px" }}
+          size="2xl"
+          onClick={() => setAside(false)}
+        />
+      )}
       <div className="aside-title">
         <img src={waves} alt="waves" />
         <h3>Music</h3>

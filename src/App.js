@@ -11,6 +11,7 @@ function App() {
   const [triggerUpdate, setTriggerUpdate] = useState(false);
   const [page, setPage] = useState("main");
   const [genre, setGenre] = useState("");
+  const [aside, setAside] = useState(false);
 
   useEffect(() => {
     setFavoritesArr(favoritesList);
@@ -58,6 +59,8 @@ function App() {
           removeFromFavorites={removeFromFavorites}
           setPage={setPage}
           setGenre={setGenre}
+          aside={aside}
+          setAside={setAside}
         />
         <Main
           addToFavorites={addToFavorites}
@@ -67,6 +70,7 @@ function App() {
           setPage={setPage}
           setGenre={setGenre}
           genre={genre}
+          setAside={setAside}
         />
         <BottomSection
           song={song}
