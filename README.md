@@ -1,6 +1,6 @@
 # React music player website
 
-![Alt text](../Music%20Player.png)
+![Alt text](src/assets/img/musicPlayer.jpg)
 
 ### Built with
 
